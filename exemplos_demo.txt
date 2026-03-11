@@ -1,0 +1,112 @@
+==================================================
+TESTES DO AGENTE INTELIGENTE
+==================================================
+
+
+==============================
+SAUDAÇÕES
+==============================
+
+oi
+olá
+bom dia
+boa tarde
+boa noite
+
+
+==============================
+PEDIDO DE AJUDA
+==============================
+
+ajuda
+o que você faz
+como funciona
+
+
+==============================
+CONSULTAS DE DATA
+==============================
+
+qual é a data de hoje
+que dia é hoje
+me diga a data de hoje
+que dia foi ontem
+que dia será amanhã
+que dia foi anteontem
+que dia será depois de amanhã
+
+daqui a 5 dias que data será
+daqui a 10 dias que data será
+daqui a 2 semanas que data será
+
+há 3 dias que data era
+há 2 semanas que data era
+
+daqui a 3 meses que data será
+há 6 meses que data era
+
+daqui a 2 anos que data será
+há 5 anos que data era
+
+
+==============================
+CÁLCULOS MATEMÁTICOS
+==============================
+
+quanto é 2 + 2
+quanto é 15 vezes 8
+quanto é 100 dividido por 4
+calcule 25 + 37
+calcule 50 - 12
+calcule 12 vezes 7
+calcule 144 dividido por 12
+
+calcule 20% de 500
+calcule 15% de 200
+calcule 30% de 900
+
+qual é a raiz quadrada de 144
+qual é a raiz quadrada de 1024
+qual é a raiz quadrada de 2044
+
+
+==============================
+PERGUNTAS PARA O LLM
+==============================
+
+o que é inteligência artificial
+explique o que é machine learning
+o que é deep learning
+qual a diferença entre inteligência artificial e machine learning
+explique o que é um modelo de linguagem
+o que são LLMs
+o que é o LangChain
+para que serve o LangChain
+o que é a biblioteca Transformers
+o que é o Hugging Face
+
+
+==============================
+PERGUNTAS MAIS COMPLEXAS
+==============================
+
+explique inteligência artificial como se eu tivesse 10 anos
+explique o que é machine learning de forma simples
+qual a importância da inteligência artificial hoje
+quais são exemplos de aplicação de inteligência artificial
+
+
+==============================
+TESTES DE ROBUSTEZ
+==============================
+
+qual a data de hoje
+qual é a data de hoje
+que dia é hoje
+
+quanto é 10 vezes 5
+quanto é 10 x 5
+calcule 10 vezes 5
+
+qual é a raiz quadrada de 400
+raiz quadrada de 400

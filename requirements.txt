@@ -1,0 +1,7 @@
+langchain
+langchain-huggingface
+transformers
+torch
+accelerate
+numexpr
+sentencepiece
