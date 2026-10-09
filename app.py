@@ -16,21 +16,21 @@ MODEL_ID = "HuggingFaceTB/SmolLM2-360M-Instruct"
 
 print("Carregando modelo... aguarde.")
 
+# Os parâmetros de geração vão no próprio pipeline: passados como
+# model_kwargs do LangChain, eles não chegavam à geração. return_full_text=False
+# faz o modelo devolver só o texto novo, sem repetir o prompt.
 generator = pipeline(
     task="text-generation",
     model=MODEL_ID,
-    tokenizer=MODEL_ID
+    tokenizer=MODEL_ID,
+    max_new_tokens=180,
+    temperature=0.4,
+    do_sample=True,
+    repetition_penalty=1.1,
+    return_full_text=False
 )
 
-llm = HuggingFacePipeline(
-    pipeline=generator,
-    model_kwargs={
-        "max_new_tokens": 180,
-        "temperature": 0.4,
-        "do_sample": True,
-        "repetition_penalty": 1.1
-    }
-)
+llm = HuggingFacePipeline(pipeline=generator)
 
 
 # =========================================================
@@ -310,10 +310,11 @@ def responder_llm(pergunta: str) -> str:
     entrada = prompt.format(pergunta=pergunta)
     resposta = llm.invoke(entrada)
 
-    if "Resposta:" in resposta:
-        resposta = resposta.split("Resposta:")[-1]
+    # Modelos pequenos às vezes continuam o padrão do prompt e inventam uma
+    # nova seção ("### ... ###") depois de responder: fica só a primeira parte.
+    resposta = resposta.split("###")[0]
 
-    resposta = limpar_texto(resposta)
+    resposta = limpar_texto(resposta).strip('"')
 
     if not resposta:
         return "Não consegui gerar uma resposta adequada."
